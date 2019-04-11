@@ -1,17 +1,14 @@
-﻿Ce chapitre commencera par introduire Vulkan et les problèmes auxquels il s’adresse. Nous nous intéresserons ensuite aux
-éléments requis pour l'affichage d'un premier triangle. Cela vous donnera une vue d'ensemble pour mieux replacer les
-futurs chapitres dans leur contexte. Nous conclurons sur la structure de Vulkan et la manière dont il est communément
-utilisé.
+﻿Ce chapitre commencera par introduire Vulkan et ses problèmes. Nous nous intéresserons ensuite aux
+éléments requis pour l'affichage de notre premier triangle. Cela vous donnera une vue d'ensemble sur l'utilisation de Vulkan pour avoir plus de facilité à suivre les chapitres suivants. Nous conclurons sur la structure de Vulkan et la manière dont il est communément utilisé.
 
 ## Origine de Vulkan
 
 Comme les APIs précédents, Vulkan est conçu comme une abstraction des
 [GPUs](https://en.wikipedia.org/wiki/Graphics_processing_unit). Le problème avec la plupart de ces APIs est qu'ils
 furent créés à une époque où le hardware graphique était limité à des fonctionnalités prédéfinies tout juste
-configurables. Les programmeurs devaient fournir les vertices dans un format standardisé, et étaient ainsi à la merci
-des constructeurs pour les options d'éclairage et les jeux d'ombre.
+configurables. Les programmeurs devaient fournir les vertices dans un format standardisé, et donc devaient compter sur les constructeurs pour les options d'éclairage et les jeux d'ombre qu'ils nous fournissaient.
 
-Au fur et à mesure que les cartes graphiques progressèrent, elles offrirent de plus en plus de fonctionnalités
+Au fil de l'évolution des cartes graphiques, elles offrirent de plus en plus de fonctionnalités
 programmables. Il fallait alors intégrer toutes ces nouvelles fonctionnalités aux APIs existants. Ceci résultait
 dans une abstraction peu pratique et le driver devait deviner l'intention du programmeur pour relier le programme aux
 architectures modernes. C'est pour cela que les drivers étaient mis à jour si souvent, et que certaines augmentaient
